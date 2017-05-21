@@ -1,6 +1,8 @@
 import React from 'react';
 import { findDOMNode } from 'react-dom';
 import { fabric } from 'fabric';
+import { Meteor } from 'meteor/meteor';
+import { Random } from 'meteor/random';
 import FabricObjects from '../../lib/fabric-objects';
 
 Meteor.subscribe('fabricObjects');
@@ -31,8 +33,7 @@ export default class Board extends React.Component {
           _id: id,
         }, fabricObject.toObject());
 
-        // const id = await FabricObjects.genInsert(fabricObject.toObject());
-        // fabricObject.id = id;
+        await FabricObjects.genInsert(doc);
         console.log(id);
       } catch (e) {
         alert(String(e));
