@@ -7,3 +7,16 @@ body {
 canvas {
   border: 1px solid grey;
 }
+
+.canvas-container {
+  margin: 0 auto;
+}
+
+.buttons-wrapper {
+  margin: 20px 0;
+}
+
+button {
+  margin: 0 3px;
+  width: 60px;
+}
