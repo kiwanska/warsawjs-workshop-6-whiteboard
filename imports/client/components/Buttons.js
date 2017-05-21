@@ -19,7 +19,7 @@ export default class Buttons extends React.Component {
         <button onClick={this.props.allowDrawing}>draw</button>
         <button onClick={this.props.allowSelecting}>select</button>
         <button onClick={this.onRemove}>remove</button>
-        <button>clean</button>
+        <button onClick={this.props.clearBoard}>clean</button>
       </div>
     );
   }

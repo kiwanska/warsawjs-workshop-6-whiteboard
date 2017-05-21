@@ -13,6 +13,10 @@ export default class Main extends React.Component {
     this.allowSelecting = this.allowSelecting.bind(this);
   }
 
+  clearBoard() {
+    Meteor.call('clearBoard');
+  }
+
   allowDrawing() {
     this.setState({
       drawingAllowed: true,
@@ -30,7 +34,7 @@ export default class Main extends React.Component {
       <div>
         <h1>whiteboard challenge</h1>
         <Board drawingAllowed={this.state.drawingAllowed} />
-        <Buttons allowDrawing={this.allowDrawing} allowSelecting={this.allowSelecting} />
+        <Buttons allowDrawing={this.allowDrawing} allowSelecting={this.allowSelecting} clearBoard={this.clearBoard} />
       </div>
     );
   }

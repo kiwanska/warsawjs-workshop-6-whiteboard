@@ -9,6 +9,14 @@ Meteor.publish({
   },
 })
 
+Meteor.methods({
+  clearBoard(boardId) {
+    FabricObjects.remove({
+      boardId,
+    });
+  },
+})
+
 Meteor.startup(() => {
   // code to run on server at startup
 });
